@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <h1>vite <kbd> webrtc </kbd></h1>
+        <div class="grid">
+          <fieldset class="stack">
+            <legend>Caller</legend>
+            <fieldset>
+              <legend>Preview</legend>
+              <video id="callerPreview" autoplay muted />
+            </fieldset>
+            <fieldset>
+              <legend>Remote stream</legend>
+              <video id="remoteCalleePreview" autoplay muted />
+            </fieldset>
+            <fieldset class="stack">
+              <legend>Select devices</legend>
+              <label>Camera</label>
+              <select id="callerCameraInput" class="camerasInput"></select>
+              <label>Microphone</label>
+              <select
+                id="callerMicrophoneInput"
+                class="microphonesInput"
+              ></select>
+            </fieldset>
+            <fieldset class="stack">
+              <legend>Offer</legend>
+              <button id="createOfferButton">Create Offer</button>
+              <input id="offerInput" placeholder="Offer Input" />
+            </fieldset>
+          </fieldset>
+
+          <fieldset class="stack">
+            <legend>Callee</legend>
+            <fieldset>
+              <legend>Preview</legend>
+              <video id="calleePreview" autoplay muted />
+            </fieldset>
+
+            <fieldset>
+              <legend>Remote stream</legend>
+              <video id="remoteCallerPreview" autoplay muted />
+            </fieldset>
+            <fieldset class="stack">
+              <legend>Select devices</legend>
+              <label>Camera</label>
+              <select id="calleeCameraInput" class="camerasInput"></select>
+              <label>Microphone</label>
+              <select
+                id="calleeMicrophoneInput"
+                class="microphonesInput"
+              ></select>
+            </fieldset>
+            <fieldset class="stack">
+              <legend>Answer</legend>
+              <button id="createAnswerButton">Create Answer</button>
+              <input id="answerInput" placeholder="Answer Input" />
+            </fieldset>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
